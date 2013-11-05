@@ -1,4 +1,9 @@
 Photogur20::Application.routes.draw do
+  get "pictures/index"
+  get "pictures/new"
+  get "pictures/edit"
+  get "pictures/show"
+  get "pictures/create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
