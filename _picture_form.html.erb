@@ -1,0 +1,12 @@
+<%= form_for @photo do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title, :class => 'small-rounded' %>
+      <br>
+      <%= f.label :author %>
+      <%= f.text_field :author, :class => 'small-rounded' %>
+      <br>
+      <%= f.label :url %>
+      <%= f.text_field :url, :class => 'small-rounded' %>
+      <br>
+      <%= f.submit 'Add picture', :class => 'button small-rounded' %>
+<% end %>
