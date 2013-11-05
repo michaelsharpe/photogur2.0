@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 1.2'
 #Zurb foundation
 gem 'zurb-foundation'
 
+#Foundation icon set
+gem 'foundation-icons-sass-rails'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

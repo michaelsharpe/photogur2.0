@@ -8,11 +8,15 @@ class PicturesController < ApplicationController
     end
   
     def new
-      
+      @picture = Picture.new
     end
   
     def create
-      
+      @picture = Picture.new picture_params
+
+      @picture.save
+
+      redirect_to pictures_path
     end
   
     def edit
@@ -28,7 +32,7 @@ class PicturesController < ApplicationController
     end
 
     private
-    def picture_param
-      params.require(:picture).picture(:title, :author, :url)
+    def picture_params
+      params.require(:picture).permit(:title, :author, :url)
     end
 end

@@ -1,0 +1,12 @@
+<%= form_for @picture do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, :class => 'radius' %>
+  <br>
+  <%= f.label :author %>
+  <%= f.text_field :author, :class => 'radius' %>
+  <br>
+  <%= f.label :url %>
+  <%= f.text_field :url, :class => 'radius' %>
+  <br>
+  <%= f.submit 'Add picture', :class => 'button radius' %>
+<% end %>

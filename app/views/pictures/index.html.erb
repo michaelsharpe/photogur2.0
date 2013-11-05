@@ -1,8 +1,8 @@
 <h1 class ='center'>Pictures</h1>
 
-<%@pictures.each do |picture|%>
+<% @pictures.each do |picture|%>
   <div class="picture-wrapper large-2 columns">
-    <a href="<% photo_path(photo) %>"><img src="<% photo.url %>"></a>
+    <a href="<%= picture_path(picture) %>"><img src="<%= picture.url %>"></a>
   </div>
 <% end %>
 
