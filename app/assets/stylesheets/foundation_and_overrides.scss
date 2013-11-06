@@ -149,7 +149,7 @@ $default-float: left;
 // Grid Variables
 //
 
-// $row-width: em-calc(1000);
+$row-width: em-calc(1000);
 // $column-gutter: em-calc(30);
 // $total-columns: 12;
 
@@ -160,7 +160,7 @@ $default-float: left;
 // We use this to control the maximum number of block grid elements per row
 
 // $block-grid-elements: 12;
-// $block-grid-default-spacing: em-calc(20);
+$block-grid-default-spacing: em-calc(40);
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 

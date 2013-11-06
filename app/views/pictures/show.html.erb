@@ -1,2 +1,13 @@
-<h1>Pictures#show</h1>
-<p>Find me in app/views/pictures/show.html.erb</p>
+<h2 class= 'center'><%= @picture.title %></h2>
+<h4 class = 'center'><%= @picture.author %></h4>
+
+<div class="image_wrapper">
+  <img src="<%= @picture.url %>" class="show-image">
+</div>
+
+<% content_for :right do %>
+  <div class="buttons_wrapper">
+    <%=link_to "Edit", edit_picture_path, :class => 'button small small-rounded' %>
+    <%= link_to "Delete", @picture, method: :delete, :class => 'button small small-rounded' %>
+  </div>
+  <% end %>

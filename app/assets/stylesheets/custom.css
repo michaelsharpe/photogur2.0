@@ -13,25 +13,36 @@ h1, h3 {
 
 .container {
   background: black;
+  height: 100%;
 }
 
 .center {
   text-align: center
 }
 
-.top-nav {
-  border-bottom: 5px gray solid;
+.round-corners {
   border-radius: 5px;
+}
+
+.border {
+  border-radius: 5px;
+  border: 3px rgba(216, 213, 213, 0.11) solid;
+}
+
+.top-nav {
   margin: 0 5px;
+  background-color: rgb(53, 53,53);
+  top: 10px;
+  border-radius: 5px;
+  border: 2px rgba(216, 213, 213, 0.11) solid;
 }
 
 .right.large-3.columns {
   top: 50px;
   background: rgb(53, 53, 53);
   border-radius: 10px;
-  padding: 37px 66px;
-  height: 111px;
-  left: 75px;
+  padding: 37px;
+  left: 20px;
 }
 
 .small-rounded {
@@ -43,9 +54,55 @@ h1, h3 {
   background: rgb(53, 53, 53);
 }
 
-.left.large-9.columns.margin {
+.left.large-9.columns{
   top: 50px;
   background: rgb(53,53,53);
   border-radius: 10px;
-  padding: 50px;
+  padding: 25px;
+}
+
+.top-bar .name {
+  color: white;
+  margin-left: 20px;
+  margin-top: 1px;
+  height: 61px;
+  font-size: 24px;
+}
+.row {
+  height: 100%;
+}
+.margin {
+  height: 100%;
+  width: 100%;
+}
+.large-12.large-centered.columns {
+  height: 100%;
+}
+
+.thumbnail {
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+  height: 162px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.row .row {
+  width: auto;
+}
+
+img, object, embed {
+  max-width: 111%;
+}
+@media only screen {
+  .column, .columns {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+}
+
+.show-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
 }

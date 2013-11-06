@@ -25,19 +25,21 @@
     <div class="container">
       <nav class="top-bar top-nav">
         <ul class="title-area">
-          <li class="name">Photogur</li>
+          <li class="name"><a href="<%= pictures_path %>">Photogur</a></li>
         </ul>
       </nav>
       <div class="main">
         <div class="row">
           <div class="large-12 large-centered columns">
-            <div class="left large-9 columns margin right-wrapper">
-              <%= yield %>
-            </div>
-            <div class='right large-3 columns margin'>  
-              <%= yield :right %>
-            </div>
+            <div class="row">
+              <div class="left large-9 columns border">
+                <div class="margin">
+                  <%= yield %>
+                </div>
+              </div>
 
+              <%= render 'right_side' unless @disable_right_side %>
+            </div>
           </div>
         </div>
       </div>

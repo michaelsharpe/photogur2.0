@@ -1,11 +1,18 @@
 <h1 class ='center'>Pictures</h1>
-
-<% @pictures.each do |picture|%>
-  <div class="picture-wrapper large-2 columns">
-    <a href="<%= picture_path(picture) %>"><img src="<%= picture.url %>"></a>
+<div class="row">
+<div class="large-12 large-center columns">
+    <% @pictures.each do |picture|%>
+      <div class="large-4 columns left thumbnail">
+        <div class="picture-wrapper">
+          <a href="<%= picture_path(picture) %>"><img src="<%= picture.url %>"></a>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
 
 <% content_for :right do %>
-  <%= link_to "Add picture", new_picture_path, :class => 'small button small-rounded center' %>
+  <div class="button-wrapper center">
+    <%= link_to "Add picture", new_picture_path, :class => 'small button small-rounded center' %>
+  </div>
 <% end %>
