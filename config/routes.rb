@@ -1,5 +1,10 @@
 Photogur20::Application.routes.draw do
+  get "sign_up" => "users#new", :as => "sign_up"
+  root :to => "pictures#index"
+
+  resources :users
   resources :pictures
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
