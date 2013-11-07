@@ -1,0 +1,18 @@
+<div class="large-4 large-centered columns form-wrapper">
+  <h1>Log In</h1>
+  <% if flash[:notice] %>
+    <p class="error"><%= flash[:notice] %></p>
+  <% end %>
+
+  <%= form_tag sessions_path do %>
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email]  %>
+    <br>
+    <%= label_tag :password %>
+    <%= text_field_tag :password %>
+    <br>
+    <%= submit_tag "Sign in!", :class => 'button small small-rounded' %>
+  <% end %>
+
+  <%= link_to "Sign up!", sign_up_path %>
+</div>

@@ -22,11 +22,26 @@
   </head>
 
   <body>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash#name" %>
+    <% end %>
+
     <div class="container">
       <nav class="top-bar top-nav">
-        <ul class="title-area">
-          <li class="name"><a href="<%= pictures_path %>">Photogur</a></li>
-        </ul>
+          <ul class="title-area">
+            <li class="name"><a href="<%= pictures_path %>">Photogur</a></li>
+          </ul>
+          <section class="top-bar-section">
+          <ul class="right">
+            <% if current_user %>
+              <li class="clear"><a href="#">Logged in as <%= current_user.email%></a></li>
+              <li class="clear"><a href="<%= log_out_path %>">Log out</a></li>
+            <% else %>
+              <li class="clear"><a href="<%= sign_up_path %> ">Sign up</a></li> 
+              <li class="clear"><a href="<%= log_in_path %> ">Log in</a></li>
+            <% end %>
+          </ul>
+        </section>
       </nav>
       <div class="main">
         <div class="row">
@@ -34,6 +49,7 @@
             <div class="row">
               <div class="left large-9 columns border">
                 <div class="margin">
+
                   <%= yield %>
                 </div>
               </div>

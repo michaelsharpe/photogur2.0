@@ -1,5 +1,5 @@
-<h1>Sign Up</h1>
 <div class="large-4 large-centered columns form-wrapper">
+  <h1>Sign Up</h1>
   <%= form_for @user do |f| %>
     <% if @user.errors.any? %>
       <div class="error_messages">
@@ -9,12 +9,8 @@
             <li><%= message %></li>
           <% end %>
         </ul>
-      <% end %>
       </div>
-      <br>
-      <%= f.label :user_name, "User name" %>
-      <%= f.text_field :user_name %>
-      <br>
+      <% end %>
       <%= f.label :email %>
       <%= f.text_field :email %>
       <br>
@@ -24,6 +20,6 @@
       <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation %>
       <br>
-      <%= f.submit "Sign Up", :class => 'button radius' %>
+      <%= f.submit "Sign Up", :class => 'button small small-rounded' %>
   <% end %>
 </div>
